@@ -1022,3 +1022,23 @@ ul {
   }
 }
 
+/* Video Section */
+.video-section {
+  margin: 3rem 0;
+  padding: 2rem 0;
+}
+
+.video-ad {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .video-section {
+    margin: 2rem 0;
+    padding: 1rem 0;
+  }
+}
+
