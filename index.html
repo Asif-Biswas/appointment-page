@@ -103,31 +103,52 @@
             </div>
         </div>
 
-        <!-- Advertisement Section 1 - Square Ads -->
+        <!-- Advertisement Section 1 - Horizontal Slider -->
         <section class="ad-section">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6 mb-3">
-                        <div class="ad-frame square-ad">
-                            <!-- <div class="ad-label">Advertisement</div> -->
-                            <div class="ad-content">
-                                <img src="./images/ad1.jpg" alt="Advertisement 1" class="ad-image">
+                <div class="ad-slider-container">
+                    <div class="ad-slider" id="adSlider">
+                        <div class="ad-slide">
+                            <div class="ad-frame square-ad">
+                                <div class="ad-content">
+                                    <img src="./images/ad1.jpg" alt="Advertisement 1" class="ad-image">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-3">
-                        <div class="ad-frame square-ad">
-                            <!-- <div class="ad-label">Sponsored</div> -->
-                            <div class="ad-content">
-                                <img src="./images/ad2.jpg" alt="Advertisement 2" class="ad-image">
+                        <div class="ad-slide">
+                            <div class="ad-frame square-ad">
+                                <div class="ad-content">
+                                    <img src="./images/ad2.jpg" alt="Advertisement 2" class="ad-image">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-3">
-                        <div class="ad-frame square-ad">
-                            <!-- <div class="ad-label">Promoted</div> -->
-                            <div class="ad-content">
-                                <img src="./images/ad3.jpg" alt="Advertisement 3" class="ad-image">
+                        <div class="ad-slide">
+                            <div class="ad-frame square-ad">
+                                <div class="ad-content">
+                                    <img src="./images/ad3.jpg" alt="Advertisement 3" class="ad-image">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Duplicate slides for seamless infinite loop -->
+                        <div class="ad-slide">
+                            <div class="ad-frame square-ad">
+                                <div class="ad-content">
+                                    <img src="./images/ad1.jpg" alt="Advertisement 1" class="ad-image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-slide">
+                            <div class="ad-frame square-ad">
+                                <div class="ad-content">
+                                    <img src="./images/ad2.jpg" alt="Advertisement 2" class="ad-image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-slide">
+                            <div class="ad-frame square-ad">
+                                <div class="ad-content">
+                                    <img src="./images/ad3.jpg" alt="Advertisement 3" class="ad-image">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -273,5 +294,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>

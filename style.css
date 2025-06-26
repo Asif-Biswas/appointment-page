@@ -1042,3 +1042,93 @@ ul {
   }
 }
 
+/* Ad Slider Styles */
+.ad-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.ad-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+  cursor: grab;
+  user-select: none;
+}
+
+.ad-slider:active {
+  cursor: grabbing;
+}
+
+/* Desktop: Show 3 images (33.33% each minus gap) */
+.ad-slide {
+  flex: 0 0 calc(33.33% - 14px);
+  min-width: calc(33.33% - 14px);
+}
+
+.ad-frame.square-ad {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background: none;
+  padding: 0;
+}
+
+.ad-frame.square-ad:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.ad-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.ad-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Pause animation on hover */
+.ad-slider-container:hover .ad-slider {
+  animation-play-state: paused;
+}
+
+/* Tablet: Show 2 images */
+@media (max-width: 992px) {
+  .ad-slide {
+    flex: 0 0 calc(50% - 10px);
+    min-width: calc(50% - 10px);
+  }
+  
+  .ad-frame.square-ad {
+    height: 220px;
+  }
+}
+
+/* Mobile: Show 1.5 images (first image 66.67%, second image 33.33% visible) */
+@media (max-width: 768px) {
+  .ad-slide {
+    flex: 0 0 66.67%;
+    min-width: 66.67%;
+  }
+  
+  .ad-frame.square-ad {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ad-frame.square-ad {
+    height: 180px;
+  }
+}
+
