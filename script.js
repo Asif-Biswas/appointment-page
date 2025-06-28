@@ -1,7 +1,38 @@
-
 // Ad Slider Infinite Scroll
 document.addEventListener('DOMContentLoaded', function () {
+    // Set current year in footer
+    document.getElementById('footer-text-year').textContent = new Date().getFullYear();
+    
+    // Telehealth icon subtle animation
+    const teleHealthIcon = document.querySelector('.telehealth-icon');
+    if (teleHealthIcon) {
+        let scale = 1;
+        let growing = false;
+        
+        function animateTelehealthIcon() {
+            if (growing) {
+                scale += 0.001;
+                if (scale >= 1.05) {
+                    growing = false;
+                }
+            } else {
+                scale -= 0.001;
+                if (scale <= 0.95) {
+                    growing = true;
+                }
+            }
+            
+            teleHealthIcon.style.transform = `scale(${scale})`;
+            requestAnimationFrame(animateTelehealthIcon);
+        }
+        
+        // Start the animation
+        animateTelehealthIcon();
+    }
+    
     const slider = document.getElementById('adSlider');
+    if (!slider) return;
+    
     const slides = slider.querySelectorAll('.ad-slide');
     const slideWidth = slides[0].offsetWidth + 20; // width + gap
     let currentIndex = 0;
