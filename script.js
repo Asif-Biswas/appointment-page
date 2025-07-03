@@ -3,6 +3,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set current year in footer
     document.getElementById('footer-text-year').textContent = new Date().getFullYear();
     
+    // Add bounce effect to the telehealth badge
+    const teleHealthBadge = document.querySelector('.telehealth-badge');
+    if (teleHealthBadge) {
+        setTimeout(() => {
+            teleHealthBadge.style.animation = 'pulse 2s infinite, bounceIn 1s';
+        }, 500);
+    }
+    
     // Animate specialty items with staggered delay
     const specialtyItems = document.querySelectorAll('.specialty-item');
     specialtyItems.forEach((item, index) => {
