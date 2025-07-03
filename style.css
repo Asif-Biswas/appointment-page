@@ -194,6 +194,7 @@ ul {
   border: 1px solid rgba(3, 178, 255, 0.2);
   transition: all 0.3s ease;
   margin-top: 0.5rem;
+  cursor: pointer;
 }
 
 .telehealth-badge:hover {
