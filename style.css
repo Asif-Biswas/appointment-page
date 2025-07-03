@@ -199,15 +199,16 @@ ul {
 
 /* Primary telehealth badge (first one) */
 .telehealth-badge:first-of-type {
-  background-color: #25d366; /* Changed to a greenish color (WhatsApp green) */
+  background-color: var(--primary-color); /* Changed back to blue */
   color: white;
   border: none;
   padding: 1rem 2rem;
   /* font-size: 1.2rem; */
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 6px 20px rgba(3, 178, 255, 0.3);
   position: relative;
   overflow: hidden;
   z-index: 1;
+  
 }
 
 /* .telehealth-badge:first-of-type::before {
@@ -234,24 +235,24 @@ ul {
 
 .telehealth-badge:first-of-type:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-  background-color: #20b956; /* Darker green on hover */
+  box-shadow: 0 10px 25px rgba(3, 178, 255, 0.4);
+  background-color: var(--primary-dark); /* Back to primary-dark */
 }
 
 /* Add pulsing animation for first telehealth badge */
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    box-shadow: 0 0 0 0 rgba(3, 178, 255, 0.7);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    box-shadow: 0 0 0 10px rgba(3, 178, 255, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    box-shadow: 0 0 0 0 rgba(3, 178, 255, 0);
   }
 }
 
-/* Enhanced green glow for telehealth badge */
+/* Enhanced blue glow for telehealth badge */
 .telehealth-badge:first-of-type {
   animation: pulse 2s infinite;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
@@ -267,21 +268,21 @@ ul {
   right: -2px;
   bottom: -2px;
   background: transparent;
-  border: 2px solid rgba(37, 211, 102, 0.3);
+  border: 2px solid rgba(3, 178, 255, 0.3);
   border-radius: 50px;
   pointer-events: none;
   z-index: -1;
-  animation: greenGlow 3s ease-in-out infinite alternate;
+  animation: blueGlow 3s ease-in-out infinite alternate;
 }
 
-@keyframes greenGlow {
+@keyframes blueGlow {
   from {
-    border-color: rgba(37, 211, 102, 0.3);
-    box-shadow: 0 0 5px rgba(37, 211, 102, 0.3);
+    border-color: rgba(3, 178, 255, 0.3);
+    box-shadow: 0 0 5px rgba(3, 178, 255, 0.3);
   }
   to {
-    border-color: rgba(37, 211, 102, 0.6);
-    box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+    border-color: rgba(3, 178, 255, 0.6);
+    box-shadow: 0 0 20px rgba(3, 178, 255, 0.6);
   }
 }
 
