@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set current year in footer
     document.getElementById('footer-text-year').textContent = new Date().getFullYear();
     
+    // Animate specialty items with staggered delay
+    const specialtyItems = document.querySelectorAll('.specialty-item');
+    specialtyItems.forEach((item, index) => {
+        item.style.setProperty('--i', index);
+    });
+    
     // Telehealth icon subtle animation
     const teleHealthIcon = document.querySelector('.telehealth-icon');
     if (teleHealthIcon) {

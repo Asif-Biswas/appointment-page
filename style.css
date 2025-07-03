@@ -603,17 +603,71 @@ ul {
 
 .specialty-item {
   background-color: var(--white);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
+  border-radius: 12px;
+  padding: 1.8rem 1.5rem;
   text-align: center;
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
   cursor: pointer;
+  border: 1px solid rgba(3, 178, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: calc(var(--i, 0) * 0.1s);
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.specialty-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: all 0.4s ease;
 }
 
 .specialty-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-7px);
+  box-shadow: 0 15px 30px rgba(3, 178, 255, 0.15);
+  border-color: rgba(3, 178, 255, 0.3);
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 1), rgba(3, 178, 255, 0.05));
+}
+
+.specialty-item:hover i {
+  transform: scale(1.2);
+  color: var(--primary-color) !important;
+}
+
+.specialty-item:hover::before {
+  width: 100%;
+  opacity: 0.1;
+}
+
+.specialty-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.specialty-item:hover .specialty-name {
+  color: var(--primary-color);
+  transform: scale(1.05);
 }
 
 .specialty-icon {
@@ -630,10 +684,6 @@ ul {
 .specialty-icon i {
   font-size: 1.8rem;
   color: var(--primary-color);
-}
-
-.specialty-name {
-  font-weight: 500;
 }
 
 /* Promo Section */
@@ -666,6 +716,7 @@ ul {
 .promo-card img {
   border-radius: var(--border-radius);
   transition: var(--transition);
+  margin-top: 16px;
 }
 
 .promo-card:hover img {
